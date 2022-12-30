@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav-menu container flex">
+        <a class="logo" href="/articles">LOGO</a>
+        <div class="flex">
+          <a class="" href="/articles/<%= article._id%>/edit"
+            ><button>Edit</button></a
+          >
+          <a class="" href="/articles/<%= article._id%>/delete"
+            ><button>Delete</button></a
+          >
+          <a class="" href="/articles"><button>Go Back</button></a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="container flex f-center">
+        <article class="article">
+          <% article.tags.forEach((tag) => { %>
+          <button><%= tag %></button>
+          <% }) %>
+
+          <h2><%= article.title %></h2>
+          <p><%= article.description %></p>
+          <cite>-<%= article.author %></cite>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

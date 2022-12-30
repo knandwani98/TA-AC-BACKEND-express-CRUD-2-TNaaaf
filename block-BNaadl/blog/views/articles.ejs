@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav-menu flex container">
+        <a class="logo" href="">LOGO</a>
+        <a href="/articles/new"><button>Add User</button></a>
+      </nav>
+    </header>
+    <main>
+      <section class="banner container">
+        <h1>List of Articles</h1>
+        <% if(articles.length) { %>
+        <ul class="main-ul">
+          <% articles.forEach((article) => { %>
+          <li>
+            <a href="/articles/<%= article._id %>">
+              <h2><%= article.title %></h2>
+            </a>
+          </li>
+          <hr />
+          <% }) %>
+        </ul>
+        <% } else { %>
+        <div class="no-article flex f-center">
+          <h2>No Articles</h2>
+        </div>
+        <% } %>
+      </section>
+    </main>
+  </body>
+</html>
