@@ -23,4 +23,5 @@ Actions for comments:
 Ensure that
 
 - when an article is deleted, all its comments should be removed as well
+
 - similarily, when comment is deleted, all its refernecs from other documents must be removed.
