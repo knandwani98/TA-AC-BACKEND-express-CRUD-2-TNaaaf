@@ -1,0 +1,366 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --one: #a7d129;
+  --two: #616f39;
+  --three: #3e432e;
+  --four: #000000;
+}
+
+/* ------- Generals ---------*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: var(--one);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Headings */
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: fantasy;
+  text-align: center;
+  color: var(--one);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Container */
+.container {
+  max-width: calc(100vw - 5rem * 2);
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* flex */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.f-center {
+  justify-content: center;
+}
+
+hr {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.main-ul li {
+  padding: 1rem 0;
+}
+
+/* Gaps n Spaces */
+
+.gap2 {
+  margin: 2rem auto;
+}
+
+/* Buttons */
+
+button {
+  font-size: 1rem;
+  padding: 0.4rem 1.4rem;
+  border-radius: 8px;
+  border: none;
+  color: var(--two);
+  font-weight: 500;
+  background-color: var(--one);
+}
+
+button:hover {
+  color: var(--four);
+}
+
+/* Error */
+.err-banner {
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: -1rem;
+}
+
+.err-banner h2 {
+  font-size: 10rem;
+  font-weight: 700;
+}
+.err-banner h3 {
+  margin: 2rem 0;
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: lowercase;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.err-banner p {
+  margin: 1rem;
+  margin-top: 3rem;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.err-banner a {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  border-radius: 20px;
+  padding: 0.7rem 1.4rem;
+  background-color: #1a73e7;
+}
+
+/* Header */
+
+header {
+  background-color: black;
+  margin-bottom: 4rem;
+}
+
+header a {
+  color: white;
+}
+
+.nav-menu {
+  padding: 2rem;
+}
+
+.nav-menu div a {
+  margin: 0 0.5rem;
+}
+
+.logo {
+  font-family: fantasy;
+  text-transform: lowercase;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Form */
+
+.form {
+  padding: 2rem;
+  width: 60%;
+}
+
+form button {
+  margin-top: 1rem;
+}
+
+form h3 {
+  font-size: 1.6rem;
+  color: var(--one);
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+
+.form-box {
+  width: 100%;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* Article */
+.no-article {
+  height: 50vh;
+}
+
+.no-article h2 {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.card-ul {
+  width: 40%;
+}
+
+/* Tags */
+
+article p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.4;
+  padding: 1rem 0;
+}
+
+article h2 {
+  margin-top: 2rem;
+  color: var(--one);
+  font-weight: 700;
+}
+
+article cite {
+  padding: 2rem 0;
+  font-size: 1.4rem;
+  display: block;
+  font-weight: 700;
+  font-family: fantasy;
+  color: royalblue;
+}
+
+article button {
+  margin-top: -5rem;
+}
+
+/* comments */
+
+.comment {
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  border-radius: 12px;
+  background-color: rgba(128, 128, 128, 0.135);
+}
