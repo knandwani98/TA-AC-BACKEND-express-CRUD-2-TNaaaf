@@ -3,11 +3,13 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var bookSchema = new Schema({
-  title: String,
+  title: { type: String, required: true },
+  author: Schema.Types.ObjectId,
   summary: String,
   pages: Number,
   publication: String,
-  cover_image: String,
+  // categories: [String],
+  cover_image: { data: Buffer, contentType: String },
 });
 
-mondule.exports = mongoose.model();
+module.exports = mongoose.model("Book", bookSchema);
