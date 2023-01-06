@@ -1,11 +1,17 @@
 var createError = require("http-errors");
 var express = require("express");
+var mongoose = require("mongoose");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
 var indexRouter = require("./routes/index");
 var bookRouter = require("./routes/books");
+var authorRouter = require("./routes/authors");
+
+mongoose.connect("mongodb://localhost/bookstore", (err) => {
+  return err ? err : "Connected True";
+});
 
 var app = express();
 
@@ -21,6 +27,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/books", bookRouter);
+app.use("/authors", authorRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
